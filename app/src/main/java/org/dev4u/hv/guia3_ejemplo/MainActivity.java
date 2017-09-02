@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //TODO cuando toco un contacto muestro un mensaje
-                Toast.makeText(MainActivity.this,"Contacto "+contactosArrayList.get(position).nombre,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this,"Contacto "+contactosArrayList.get(position).nombre,Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,MensajeActivity.class));
             }
         });
     }
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==GUARDADO){
+            if(data==null) return;
             //recibo los datos
             Contacto c = new Contacto(
                     data.getStringExtra("NOMBRE"),
