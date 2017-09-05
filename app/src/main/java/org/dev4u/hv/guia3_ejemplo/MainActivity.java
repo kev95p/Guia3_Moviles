@@ -55,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //TODO cuando toco un contacto muestro un mensaje
-                Toast.makeText(MainActivity.this,"Contacto "+contactosArrayList.get(position).nombre,Toast.LENGTH_SHORT).show();
-                //startActivity(new Intent(MainActivity.this,MensajeActivity.class));
+                startActivity(new Intent(MainActivity.this,MensajeActivity.class));
             }
         });
     }

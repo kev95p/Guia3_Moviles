@@ -19,6 +19,7 @@ public class AdaptadorContacto extends ArrayAdapter<Contacto> {
     //TODO constructor con 2 parametros : el contexto y la lista de objetos (Contacto)
     public AdaptadorContacto(Context context, List<Contacto> objects) {
         super(context, 0, objects);
+        
     }
     @NonNull
     @Override
